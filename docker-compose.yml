@@ -40,6 +40,7 @@ services:
         source: ./logstash/pipeline
         target: /usr/share/logstash/pipeline
         read_only: true
+      - ./mydata:/usr/share/logstash/mydata
     ports:
       - "5000:5000"
       - "9600:9600"
