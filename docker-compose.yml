@@ -80,7 +80,8 @@ services:
       - "$PWD/certificate.key:/etc/nginx/ssl/certificate.key"
       - "$PWD/kibana.htpasswd:/etc/nginx/conf.d/kibana.htpasswd"
       - "$PWD/default.conf:/etc/nginx/conf.d/default.conf"
-
+    networks:
+      - elk
 networks:
   elk:
     driver: bridge
