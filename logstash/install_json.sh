@@ -28,9 +28,9 @@ wait
 echo ""
 echo logstash has started
 
-sleep 120 &
+sleep 180 &
 
 wait
 echo ""
-echo 2 minutes later
+echo 3 minutes later
 echo ""
