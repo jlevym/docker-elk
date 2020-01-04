@@ -13,19 +13,24 @@ cp $1.conf pipeline/logstash.conf &
 wait $!
 echo inserting $1 files
 
-echo installing $2 files
+#echo installing $2 files
 
-head -$2 ~/elastic-search/$1.json > ~/dev_serverless/docker-elk/mydata/mongodb.json &
+#head -$2 ~/elastic-search/$1.json > ~/dev_serverless/docker-elk/mydata/mongodb.json &
+
+cat  ~/elastic-search/$1.json > ~/dev_serverless/docker-elk/mydata/mongodb.json &
+
 wait $!
+echo ""
 echo starting logstash
 docker-compose start logstash &
 
 wait
+echo ""
 echo logstash has started
 
-sleep 60 &
+sleep 120 &
 
 wait
-
-echo 1 minute later
-
+echo ""
+echo 2 minutes later
+echo ""
