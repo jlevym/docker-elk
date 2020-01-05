@@ -26,11 +26,31 @@ docker-compose start logstash &
 
 wait
 echo ""
-echo logstash has started
+echo logstash is starting up
 
-sleep 180 &
-
-wait
+sleep 1 &
+wait $!
 echo ""
-echo 3 minutes later
+echo 3 minutes to go!
+echo ""
+
+sleep 60 &
+
+wait $!
+echo ""
+echo 1 out of 3  minute later
+echo ""
+
+sleep 60 &
+
+wait $!
+echo ""
+echo 2 out of 3  minute later
+echo ""
+
+sleep 60 &
+
+wait $!
+echo ""
+echo finsihed!
 echo ""
