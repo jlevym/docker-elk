@@ -22,8 +22,8 @@ wait $!
 
 ./install_json.sh* reports
 
-sleep 120 &
+sleep 10 &
 
 wait $!
 
-echo all collections installed 
+echo all collections installed

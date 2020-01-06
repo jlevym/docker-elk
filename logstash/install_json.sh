@@ -31,26 +31,13 @@ echo logstash is starting up
 sleep 1 &
 wait $!
 echo ""
-echo 3 minutes to go!
+echo  "1 minute sleep"
 echo ""
 
 sleep 60 &
 
 wait $!
-echo ""
-echo 1 out of 3  minute later
-echo ""
 
-sleep 60 &
-
-wait $!
 echo ""
-echo 2 out of 3  minute later
-echo ""
-
-sleep 60 &
-
-wait $!
-echo ""
-echo finsihed!
+echo finsihed $1
 echo ""
