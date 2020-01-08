@@ -70,8 +70,8 @@ services:
   nginx:
     image: nginx
     ports:
-      - "5602:443"
-      - "5603:444"
+      - "443:5602"
+      - "444:5603"
     links:
       - kibana
       - elasticsearch
